@@ -1,11 +1,19 @@
 import { useState } from "react";
+import ReactPlayer from "react-player";
 import "./VideoPlayer.css"
 
 const VideoPlayer = () => {
     const [link, setLink] = useState("");
+    const [hasLink, setHasLink] = useState(false);
 
     const handleChange = (event) => {
-        setLink(event.target.value);
+        const inputLink = event.target.value;
+        if (inputLink === "") {
+            setHasLink(false);
+        } else {
+            setLink(inputLink);
+            setHasLink(true);
+        }
     }
 
     return (
@@ -16,6 +24,17 @@ const VideoPlayer = () => {
                 onChange={handleChange} 
                 placeholder="paste your video link here"
             />
+            <div className="video-player-output">
+                {hasLink? 
+                    <ReactPlayer
+                        width="50vw"
+                        height="50vh"
+                        controls
+                        url={link} 
+                    /> : 
+                    <p>Your video will play here!!</p>
+                }
+            </div>
         </div>
     );
 }

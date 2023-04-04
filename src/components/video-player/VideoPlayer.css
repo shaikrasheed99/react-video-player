@@ -1,8 +1,13 @@
 .video-player {
     margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3vw;
+    box-sizing: border-box;
 }
 
-.video-player input {
+.video-player-input {
     width: 30vw;
     height: 5vh;
     font-size: 1.2vw;
@@ -10,4 +15,24 @@
     border-radius: 2vw;
     padding-left: 1vw;
     outline: none;
+}
+
+.video-player-output {
+    width: 50vw;
+    height: 50vh;
+    border: 5px solid;
+    border-radius: 2vw;
+    padding: 1vw;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-player-output p {
+    font-size: 3vw;
+    background-color: cadetblue;
+    padding: 1vw 2vw;
+    border-radius: 10vw;
 }
