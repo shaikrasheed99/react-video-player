@@ -1,0 +1,13 @@
+.video-player {
+    margin-top: 10vw;
+}
+
+.video-player input {
+    width: 30vw;
+    height: 5vh;
+    font-size: 1.2vw;
+    border: 0;
+    border-radius: 2vw;
+    padding-left: 1vw;
+    outline: none;
+}

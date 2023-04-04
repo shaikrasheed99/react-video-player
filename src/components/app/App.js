@@ -1,9 +1,10 @@
 import "./App.css"
+import VideoPlayer from "../video-player/VideoPlayer";
 
 const App = () => {
   return (
     <div className="container">
-      <h1>Hello</h1>
+      <VideoPlayer />
     </div>
   );
 }
