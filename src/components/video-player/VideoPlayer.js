@@ -18,11 +18,20 @@ const VideoPlayer = () => {
 
     return (
         <div className="video-player">
+            <div className="video-player-icons">
+                <ul>
+                    <li><img className="icon" src="youtube.png" alt="youtube" /></li>
+                    <li><img className="icon" src="facebook.png" alt="facebook" /></li>
+                    <li><img className="icon" src="twitch.png" alt="twitch" /></li>
+                    <li><img className="icon" src="vimeo.png" alt="vimeo" /></li>
+                    <li><img className="icon" src="soundcloud.png" alt="soundcloud" /></li>
+                </ul>
+            </div>
             <input 
                 type="text" 
                 className="video-player-input" 
                 onChange={handleChange} 
-                placeholder="paste your video link here"
+                placeholder="paste the video link from any one of the above platforms"
             />
             <div className="video-player-output">
                 {hasLink? 
